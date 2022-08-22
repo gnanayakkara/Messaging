@@ -1,0 +1,20 @@
+https://youtu.be/-fWznY5nBSg
+https://youtu.be/aKDWWICgfA0?list=PLGRDMO4rOGcNLwoack4ZiTyewUcF6y6BU
+
+#start zookeeper
+C:\kafka\bin\windows>zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+#Start kafka server port 9092
+kafka-server-start.bat ..\..\config\server.properties
+
+#Create a topic
+C:\kafka>.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+
+#Create a producer
+C:\kafka>.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+then u can create events
+
+#Consumer
+C:\kafka>.\bin\windows\kafka-console-consumer.bat --topic topic-example --bootstrap-server localhost:9092
+#From Beginning
+C:\kafka>.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
