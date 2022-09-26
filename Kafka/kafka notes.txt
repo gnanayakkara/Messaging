@@ -6,6 +6,7 @@ C:\kafka\bin\windows>zookeeper-server-start.bat ..\..\config\zookeeper.propertie
 
 #Start kafka server port 9092
 kafka-server-start.bat ..\..\config\server.properties
+listeners=PLAINTEXT://127.0.0.1:9092 change this if connection issue
 
 #Create a topic
 C:\kafka>.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
